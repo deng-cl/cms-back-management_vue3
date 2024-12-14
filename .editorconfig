@@ -1,0 +1,15 @@
+# https://editorconfig.org --> 代码编辑风格配置
+
+root = true # 表示当前配置文件是在项目的根目录下的
+
+[*] # 表示所有文件使用
+    charset = utf-8 # 配置  文本字符集为 utf-8
+    indent_style = space # 缩进风格（tab | space）
+    indent_size = 4 # 缩进大小
+    end_of_line = lf # 控制换行类型（lf | cr | crlf）
+    insert_final_newline = true # 去除首行的任意空白字符
+    trim_trailing_whitespace = true # 始终在文件尾部插入一个新行
+
+[*.md] # 表示仅 md 文件使用以下规则
+    insert_final_newline = false
+    trim_trailing_whitespace = false

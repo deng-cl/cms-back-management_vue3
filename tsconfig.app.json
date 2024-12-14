@@ -1,0 +1,29 @@
+{
+    "extends": "@vue/tsconfig/tsconfig.dom.json",
+    "include": [
+        "env.d.ts",
+        "src/**/*",
+        "src/**/*.vue",
+        "src/**/**/*.vue",
+        "src/**/*.ts",
+        "src/**/***/*.ts",
+        "src/**/**/**/*.ts",
+        "src/**/**/**/*.ts",
+        "c:/Users/KXH/Desktop/desktop-file/nowCode/Vue3+TypeScript/vue3-ts-cms/src/components/breadcrumb/breadcrumb.vue",
+        "custom.d.ts",
+        "element-plus/dist/locale/zh-cn.mjs"
+    ],
+    "exclude": [
+        "src/**/__tests__/*"
+    ],
+    "compilerOptions": {
+        "composite": true,
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
+    }
+}

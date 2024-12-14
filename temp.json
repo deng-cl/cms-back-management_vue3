@@ -1,0 +1,21 @@
+{
+    "id": 3,
+    "icon": "el-icon-ShoppingCartFull",
+    "children": [
+        {
+            "path": "order",
+            "title": "全部订单",
+            "permission": {
+                "query": {
+                    "msg": "order:order_index:query",
+                    "name": "查询订单信息"
+                },
+                "update": {
+                    "msg": "order:order_pedding:update",
+                    "name": "修改订单状态"
+                }
+            }
+        }
+    ],
+    "parent_title": "订单管理"
+}
