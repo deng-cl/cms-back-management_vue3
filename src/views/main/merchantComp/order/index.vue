@@ -27,24 +27,6 @@ enum OrderStatus {
     FINISHED = '2', // -- 已完成
 }
 const modifyOrderStatus = async (id: number, status: OrderStatus, promptText: string, title?: string) => {
-    // try {
-    //     await ElMessageBox.confirm(
-    //         `请在此确认${state ? '上架' : '下架'}此商品`,
-    //         '确认框',
-    //         {
-    //             distinguishCancelAndClose: true,
-    //             confirmButtonText: '确认',
-    //             cancelButtonText: '取消',
-    //         }
-    //     )
-
-    //     const res = await queryPut("/product/update/state", { id, state: String(state) })
-
-    //     showMessage.success(`商品${state ? '上架' : '下架'}成功`)
-    // } catch (e) {
-    //     if (e === "cancel") return
-    //     showMessage.error(`商品${state ? '上架' : '下架'}失败: ` + e)
-    // }
 
     try {
         await ElMessageBox.confirm(
@@ -113,7 +95,7 @@ const modifyOrderStatus = async (id: number, status: OrderStatus, promptText: st
                 <template v-if="row.status === '-1'">
                     <el-button class="el-button-custom" size="small"
                         @click="modifyOrderStatus(row.id, OrderStatus.REFUNDED, '同意退款', '退款申请处理')"
-                        type="primary">同意申请</el-button>
+                        type="warning">同意申请</el-button>
                     <el-button class="el-button-custom" size="small"
                         @click="modifyOrderStatus(row.id, OrderStatus.WAIT_FOR_RECEIVING, '拒绝退款', '退款申请处理')"
                         type="danger">拒绝申请</el-button>

@@ -107,10 +107,11 @@ const ITEM_STYLE = [ // 总览背景颜色配置
 
 <style scoped lang="scss">
 .header {
+    padding: 0 20px;
+    box-sizing: border-box;
 
     .title {
         margin-bottom: 0;
-        margin-left: 20px;
         color: #878787;
         font-weight: 500;
         font-size: 20px;

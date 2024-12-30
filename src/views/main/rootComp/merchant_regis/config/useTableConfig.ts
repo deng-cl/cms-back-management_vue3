@@ -39,7 +39,8 @@ const useTableConfig: UseTableConfig = () => {
         {
             label: "操作",
             slotName: "handle",
-            width: "160"
+            width: "160",
+            fixed: "right"
         }
     ]
 

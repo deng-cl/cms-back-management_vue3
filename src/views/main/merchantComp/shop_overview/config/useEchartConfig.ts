@@ -56,46 +56,26 @@ const useEchartConfig = () => {
     const _echartConfig_2: any = computed(() => { // -- 各标签商品销量
         return {
             tooltip: {
-                trigger: 'item'
+                trigger: 'item',
             },
-            legend: {
-                top: '0%',
-                left: 'center'
+            // legend:[1,2,4],
+            xAxis: {
+                data: (() => classifyStatistics.value?.map(item => item.tag_name))(),
             },
+              yAxis: {},
             series: [
                 {
-                    name: '各商品标签的商品销量',
-                    type: 'pie',
-                    radius: ['50%', '80%'],
-                    avoidLabelOverlap: false,
-                    padAngle: 5,
-                    itemStyle: {
-                        borderRadius: 10
-                    },
-                    label: {
-                        show: false,
-                        position: 'center'
-                    },
-                    emphasis: {
-                        label: {
-                            show: true,
-                            fontSize: 12,
-                            fontWeight: 'bold'
-                        }
-                    },
-                    labelLine: {
-                        show: false
-                    },
-                    data: (() => {
-                        return classifyStatistics.value?.map(item => {
+                    type: 'line',
+                    data: (() => classifyStatistics.value?.map(item => {
                             return {
                                 value: item.statistics.slaes,
                                 name: item.tag_name
                             }
                         })
-                    })()
+                    )(),
+                    smooth:true,
                 }
-            ]
+            ],
         }
     })
 

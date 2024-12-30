@@ -9,7 +9,8 @@ const useTableConfig: UseTableConfig = () => {
     const tableConfig = [ // 🔺el-table 表格配置项
         {
             prop: "product_name",
-            label: "商品名称"
+            label: "商品名称",
+            width: "180"
         },
         {
             prop: "product_pics",
@@ -18,7 +19,9 @@ const useTableConfig: UseTableConfig = () => {
         },
         {
             prop: "product_desc",
-            label: "商品描述"
+            label: "商品描述",
+            minWidth: "180",
+            maxWidth: "240",
         },
         {
             prop: "buy_count",
@@ -46,7 +49,8 @@ const useTableConfig: UseTableConfig = () => {
         {
             label: "操作",
             slotName: "handle",
-            width: "220"
+            width: "180",
+            fixed: 'right'
         }
     ]
 

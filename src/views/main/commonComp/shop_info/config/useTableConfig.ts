@@ -16,6 +16,7 @@ const useTableConfig: UseTableConfig = () => {
         {
             prop: "product_name",
             label: "商品名称",
+            minWidth: "180",
         },
         {
             prop: "pics",
@@ -41,15 +42,18 @@ const useTableConfig: UseTableConfig = () => {
         {
             prop: "createAt",
             label: "创建时间",
+            width: "120",
         },
         {
             prop: "updateAt",
             label: "更新时间",
+            width: "120",
         },
         {
             label: "操作",
             slotName: "handle",
-            width: "200"
+            width: "200",
+            fixed: "right"
         }
     ]
 

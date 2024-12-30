@@ -8,7 +8,7 @@ import loginPhone from './login-phone.vue';
 
 <template>
     <div class="login-panel">
-        <h1 class="title">后台管理系统</h1>
+        <h1 class="title">电子产品后台管理系统</h1>
         <el-tabs type="border-card" class="demo-tabs" stretch>
             <el-tab-pane>
                 <template #label>
@@ -40,13 +40,21 @@ import loginPhone from './login-phone.vue';
 
 <style scoped lang="scss">
 .title {
-    color: #409eff;
+    /* color: #409eff; */
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 36px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .login-panel {
+    min-width: 375px;
+    max-width: 580px;
+    width: 24vw;
     text-align: center;
-    width: 375px;
-    margin-bottom: 200px;
+    /* margin-right: 12vw; */
+    margin-bottom: 80px;
 }
 </style>
 
@@ -54,9 +62,10 @@ import loginPhone from './login-phone.vue';
 <style>
 /* element-plus component style */
 .demo-tabs {
-    border-color: #47b2e44a;
-    border-radius: 4px;
-    box-shadow: 0 1px 10px 1px #c9eeff78;
+    /* border-color: #47b2e44a; */
+    /* box-shadow: 0 1px 10px 1px #c9eeff78; */
+    border-color: white;
+    border-radius: 6px;
     overflow: hidden;
 }
 

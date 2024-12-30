@@ -31,5 +31,8 @@ const { _echartConfig_1, _echartConfig_2 } = useEchartConfig()
 </template>
 
 <style scoped lang="scss">
-.shop-overview {}
+.shop-overview {
+    padding: 0 24px;
+    box-sizing: border-box;
+}
 </style>
