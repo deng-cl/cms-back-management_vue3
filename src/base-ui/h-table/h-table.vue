@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import useNormalUser from '@/views/main/rootComp/normal_user/store';
-import { ref, type Ref } from 'vue'
-
 export interface TableEventType { // 其它事件类型，需要使用到时再到 element-plus 中查看对应的事件....
     selectionChange: (newSelection: any[]) => void
 }
@@ -21,6 +18,7 @@ export interface PaginationConfig { // 分页组件配置选项
     prop: PaginationPropConfig
     event: PaginationEventConfig
 }
+
 export type SelectEnable = (row: any, rowIndex: any) => boolean
 
 const props = withDefaults(
@@ -98,6 +96,11 @@ const props = withDefaults(
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .title {
+            font-size: 18px;
+            margin: 12px 0;
+        }
     }
 
     .handle {

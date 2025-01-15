@@ -1,28 +1,30 @@
-import { createRouter, createWebHistory, createWebHashHistory } from "vue-router";
-import type { RouteRecordRaw } from "vue-router"
-import loginRoutes from "./login/login";
-import mainRoutes from "./main/main";
-import { beforeEach } from "./nav_protect/nav_protect";
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
+import loginRoutes from './modules/login'
+import mainRoutes from './modules/main'
+import { setBeforeEach } from './handler/index'
 
-
+// -- merge routes
 const routes: RouteRecordRaw[] = [
     {
-        path: "/",
+        path: '/',
         redirect: '/login'
     },
+    ...loginRoutes,
+    ...mainRoutes,
     {
-        path: "/not_found",
-        component: () => import("@/views/not_found/not_found.vue"),
-    },
-    ...loginRoutes, // login page routes registory
-    ...mainRoutes, // main page routes registory
+        path: '/not_found',
+        component: () => import('@/views/notfound/index.vue')
+    }
 ]
 
-const router = createRouter({ // create toutes instance
+// create routes instance and set routes
+const router = createRouter({
     history: createWebHashHistory(),
     routes
 })
 
-beforeEach(router) // 路由前置守卫 hook <抽取>
+// set beforeEach handler
+setBeforeEach(router)
 
 export default router

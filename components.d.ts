@@ -7,7 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Breadcrumb: typeof import('./src/components/breadcrumb/breadcrumb.vue')['default']
+    Breadcrumb: typeof import('./src/components/breadcrumb.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
@@ -46,9 +46,11 @@ declare module 'vue' {
     ElTag: typeof import('element-plus/es')['ElTag']
     ElText: typeof import('element-plus/es')['ElText']
     ElUpload: typeof import('element-plus/es')['ElUpload']
-    MainContent: typeof import('./src/components/main-content/main-content.vue')['default']
-    MainHeader: typeof import('./src/components/main-header/main-header.vue')['default']
-    MainNavMenu: typeof import('./src/components/main-nav-menu/main-nav-menu.vue')['default']
+    Header: typeof import('./src/components/header.vue')['default']
+    MainContent: (typeof import('./src/components/main-content/main-content.vue'))['default']
+    MainHeader: (typeof import('./src/components/header.vue'))['default']
+    MainNavMenu: (typeof import('./src/components/menu.vue'))['default']
+    Menu: typeof import('./src/components/menu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

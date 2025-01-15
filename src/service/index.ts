@@ -6,8 +6,8 @@ const hRequest = new HRequest({ // 配置封装的当前 axios 实例的默认�
     baseURL: BASE_URL,
     timeout: TIME_OUT,
     interceptors: {
+        // -- add request interceptor - 携带 token
         requestInterceptor(config) {
-            // 携带 token 的拦截
             const token = localCache.getCache("token")
             if (token) {
                 config.headers.Authorization = `Bearer ${token}`

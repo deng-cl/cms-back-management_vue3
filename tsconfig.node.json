@@ -15,6 +15,11 @@
         "moduleResolution": "Bundler",
         "types": [
             "node"
-        ]
+        ],
+        "paths": {
+            "@/*": [
+                "/src/*"
+            ]
+        }
     }
 }

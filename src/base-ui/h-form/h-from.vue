@@ -5,10 +5,8 @@
     + colLayout -> 配置响应式表单
  -->
 <script setup lang="ts">
-import { watch } from 'vue';
 import type { PopupFormItem } from '../main-page-popup/types';
 import type { IColLayout, IFormItem } from './types'
-import { ref } from 'vue';
 
 withDefaults( /* withDefaults 宏 --> 用于给 ts 方式的 defineProps 定义默认值 */
     defineProps<{ /* 属性拦截 --> 通过传入不同的配置属性，来定义不同需求的 form 表单 */

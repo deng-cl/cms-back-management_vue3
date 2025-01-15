@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ElConfigProvider } from 'element-plus'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
-import mainNavMenu from '@/components/main-nav-menu/main-nav-menu.vue';
-import mainHeader from '@/components/main-header/main-header.vue';
+import mainNavMenu from '@/components/menu.vue';
+import mainHeader from '@/components/header.vue';
 import { ref } from 'vue';
 
 const collapse = ref<boolean>(true); // 是否展开显示 menu 左侧导航栏（展开或收缩）
@@ -71,6 +71,3 @@ const upCollapse = () => collapse.value = !collapse.value // 修改 collapses
 
 }
 </style>
-
-
-

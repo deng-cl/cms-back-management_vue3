@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import loginPanel from './conps/login-panel.vue';
+import loginPanel from './conps/panel.vue';
 </script>
 
 <template>
