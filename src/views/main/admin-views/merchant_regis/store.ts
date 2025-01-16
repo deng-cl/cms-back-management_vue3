@@ -1,6 +1,6 @@
 import { reactive } from "vue";
 import { defineStore } from "pinia";
-import { useCommonStoreConfig } from "../../config/useCommonStoreConfig";
+import { useCommonStoreConfig } from "@/store/hooks/useCommonStoreConfig";
 
 
 // 🔺分页器配置项
