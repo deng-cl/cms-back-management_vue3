@@ -2,7 +2,7 @@
 
 **客户端前台代码地址**: [cms-client_uniapp](https://github.com/deng-cl/cms-client_uniapp)
 
-**Node后端代码地址**: [cms-node_koa]([https://github.com/deng-cl/cms-client_uniapp](https://github.com/deng-cl/cms-node_koa))
+**Node后端代码地址**: [cms-node_koa](https://github.com/deng-cl/cms-node_koa)
 
 下面是该项目中部分页面的截图
 
