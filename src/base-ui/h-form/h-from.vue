@@ -5,7 +5,7 @@
     + colLayout -> 配置响应式表单
  -->
 <script setup lang="ts">
-import type { PopupFormItem } from '../main-page-popup/types';
+import type { PopupFormItem } from '@/base-ui/main/types';
 import type { IColLayout, IFormItem } from './types'
 
 withDefaults( /* withDefaults 宏 --> 用于给 ts 方式的 defineProps 定义默认值 */

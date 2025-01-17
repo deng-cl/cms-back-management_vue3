@@ -1,15 +1,16 @@
-import type { PopupForm } from "@/base-ui/main-page-popup/types"
-import { computed, reactive, ref, watch, type Ref, } from "vue"
-import useTagStore from "../store"
-import { createPopupComfirm } from "./handleMethod"
-import type { PopupConfig, PopupFooterConfig } from "@/base-ui/main/h-popup.vue"
-import rules from "@/global/form-rules";
+import type { PopupForm } from '@/base-ui/main/types'
+import { computed, reactive, ref, watch, type Ref } from 'vue'
+import useTagStore from '../store'
+import { createPopupComfirm } from './handleMethod'
+import type { PopupConfig, PopupFooterConfig } from '@/base-ui/main/h-popup.vue'
+import rules from '@/global/form-rules'
 
 const store = useTagStore()
 
-store.popupFormData = { // 默认表单 formData
+store.popupFormData = {
+    // 默认表单 formData
     nickname: undefined,
-    sex: "未知",
+    sex: '未知',
     age: undefined,
     name: undefined,
     id_card: undefined,
@@ -32,84 +33,84 @@ const usePopupConfig: () => UsePopupConfigType = () => {
 
     const showPopup = computed(() => store.showPopupForm)
 
-    const popupTitle = "创建商家用户"
+    const popupTitle = '创建商家用户'
 
     const popupFormConfig: PopupForm = {
         formItems: [
             {
-                field: "username",
+                field: 'username',
                 type: 'input',
-                label: "用户名/账号",
-                placeholder: "请输入用户名",
+                label: '用户名/账号',
+                placeholder: '请输入用户名',
                 rules: rules.username
             },
             {
-                field: "password",
+                field: 'password',
                 type: 'password',
-                label: "密码",
-                placeholder: "请输入密码",
+                label: '密码',
+                placeholder: '请输入密码',
                 rules: rules.password
             },
             {
-                field: "phone",
+                field: 'phone',
                 type: 'input',
-                label: "手机号",
-                placeholder: "请输入身手机号",
+                label: '手机号',
+                placeholder: '请输入身手机号',
                 rules: rules.phone
             },
             {
-                field: "name",
+                field: 'name',
                 type: 'input',
-                label: "姓名",
-                placeholder: "请输入身姓名",
+                label: '姓名',
+                placeholder: '请输入身姓名',
                 rules: rules.name
             },
             {
-                field: "id_card",
+                field: 'id_card',
                 type: 'input',
-                label: "ID_Card",
-                placeholder: "请输入身份证号",
+                label: 'ID_Card',
+                placeholder: '请输入身份证号',
                 rules: rules.id_card
             },
             {
-                field: "nickname",
+                field: 'nickname',
                 type: 'input',
-                label: "昵称",
-                placeholder: "请输入昵称",
+                label: '昵称',
+                placeholder: '请输入昵称',
                 rules: rules.nickname
             },
             {
-                field: "sex",
+                field: 'sex',
                 type: 'radio',
-                label: "性别",
-                placeholder: "请输入标签名",
+                label: '性别',
+                placeholder: '请输入标签名',
                 radioOptions: [
                     {
-                        label: "未知",
-                        value: "未知"
+                        label: '未知',
+                        value: '未知'
                     },
                     {
-                        label: "男",
-                        value: "男"
+                        label: '男',
+                        value: '男'
                     },
                     {
-                        label: "女",
-                        value: "女"
-                    },
+                        label: '女',
+                        value: '女'
+                    }
                 ]
             },
             {
-                field: "age",
+                field: 'age',
                 type: 'number',
-                label: "年龄",
-                placeholder: "请输入年龄",
+                label: '年龄',
+                placeholder: '请输入年龄',
                 rules: rules.age
             },
             {
-                field: "shop_name",
+                field: 'shop_name',
                 type: 'input',
-                label: "店铺名称",
-                placeholder: "请输入店铺名称",
+                label: '店铺名称',
+                placeholder: '请输入店铺名称',
                 rules: rules.shop_name
             }
         ],
@@ -118,17 +119,17 @@ const usePopupConfig: () => UsePopupConfigType = () => {
             lg: { span: 12 },
             md: { span: 20 },
             sm: { span: 24 },
-            xs: { span: 24 },
+            xs: { span: 24 }
         }
     }
 
     const popupFooterConfig: PopupFooterConfig = {
-        confirmTitle: "确认创建",
+        confirmTitle: '确认创建',
         confirmEvent: () => {
             // 发送请求 ....
             createPopupComfirm()
         },
-        cancelTitle: "取消",
+        cancelTitle: '取消',
         cancelEvent: () => {
             // 隐藏 popup 弹出层 ....
             store.upHidePopupForm() // 更改是否显示弹出层状态未 false

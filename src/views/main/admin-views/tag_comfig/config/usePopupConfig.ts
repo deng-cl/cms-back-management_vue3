@@ -1,13 +1,14 @@
-import type { PopupForm } from "@/base-ui/main-page-popup/types"
-import { computed, reactive, ref, watch, type Ref, } from "vue"
-import useTagStore from "../store"
-import { editorPopupComfirm, createPopupComfirm } from "./handleMethod"
-import type { PopupConfig, PopupFooterConfig } from "@/base-ui/main/h-popup.vue"
-import rules from "@/global/form-rules";
+import type { PopupForm } from '@/base-ui/main/types'
+import { computed, reactive, ref, watch, type Ref } from 'vue'
+import useTagStore from '../store'
+import { editorPopupComfirm, createPopupComfirm } from './handleMethod'
+import type { PopupConfig, PopupFooterConfig } from '@/base-ui/main/h-popup.vue'
+import rules from '@/global/form-rules'
 
 const store = useTagStore()
 
-store.popupFormData = { // 默认表单 formData
+store.popupFormData = {
+    // 默认表单 formData
     tag: undefined,
     msg: undefined
 }
@@ -32,20 +33,20 @@ const usePopupConfig: () => UsePopupConfigType = () => {
     const popupFormConfig: PopupForm = {
         formItems: [
             {
-                field: "tag",
+                field: 'tag',
                 type: 'input',
-                label: "标签名",
-                placeholder: "请输入标签名",
+                label: '标签名',
+                placeholder: '请输入标签名',
                 rules: rules.tag_name
             },
             {
-                field: "msg",
+                field: 'msg',
                 type: 'input',
-                label: "描述",
-                placeholder: "请输入标签的描述信息<可自定义缩放表单大小>",
+                label: '描述',
+                placeholder: '请输入标签的描述信息<可自定义缩放表单大小>',
                 orhterOptions: {
                     autosize: { minRows: 3, maxRows: 6 },
-                    type: "textarea"
+                    type: 'textarea'
                 },
                 rules: rules.tag_msg
             }
@@ -55,7 +56,7 @@ const usePopupConfig: () => UsePopupConfigType = () => {
             lg: { span: 24 },
             md: { span: 24 },
             sm: { span: 24 },
-            xs: { span: 24 },
+            xs: { span: 24 }
         }
     }
 
@@ -71,13 +72,12 @@ const usePopupConfig: () => UsePopupConfigType = () => {
                 editorPopupComfirm() // 请求方法传入对应的数据参数
             }
         },
-        cancelTitle: "取消",
+        cancelTitle: '取消',
         cancelEvent: () => {
             // 隐藏 popup 弹出层 ....
             store.upHidePopupForm() // 更改是否显示弹出层状态未 false
         }
     }
-
 
     return {
         popupTitle,

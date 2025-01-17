@@ -1,4 +1,4 @@
-import type { PopupForm } from '@/base-ui/main-page-popup/types'
+import type { PopupForm } from '@/base-ui/main/types'
 import { computed, reactive, ref, watch, type Ref } from 'vue'
 import useProductStore from '../store'
 import { createShop, editorShopInfo } from './handleMethod'

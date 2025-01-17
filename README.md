@@ -1,46 +1,37 @@
 # vue3-ts-cms
 
-This template should help get you started developing with Vue 3 in Vite.
+下面是项目中部分页面的截图
 
-## Recommended IDE Setup
+## 项目截图
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+![performance](./docs/screenshots/performance.png)
 
-## Type Support for `.vue` Imports in TS
+![登录页面](./docs/screenshots/login.png)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+![](./docs/screenshots/0.png)
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+![](./docs/screenshots/1.png)
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+![](./docs/screenshots/2.png)
 
-## Customize configuration
+![](./docs/screenshots/3.png)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+![](./docs/screenshots/4.png)
 
-## Project Setup
+![](./docs/screenshots/5.png)
 
-```sh
-npm install
-```
+![](./docs/screenshots/6.png)
 
-### Compile and Hot-Reload for Development
+![](./docs/screenshots/7.png)
 
-```sh
-npm run dev
-```
+![](./docs/screenshots/8.png)
 
-### Type-Check, Compile and Minify for Production
+![](./docs/screenshots/9.png)
 
-```sh
-npm run build
-```
+![](./docs/screenshots/10.png)
 
-### Lint with [ESLint](https://eslint.org/)
+![](./docs/screenshots/11.png)
 
-```sh
-npm run lint
-```
+![](./docs/screenshots/13.png)
+
+![](./docs/screenshots/12.png)

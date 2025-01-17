@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PopupForm } from '../main-page-popup/types';
+import type { PopupForm } from './types';
 import hFrom from '../h-form/h-from.vue';
 
 export interface PopupFooterConfig {
